@@ -1,5 +1,5 @@
 import express from 'express'
-import {equiposRoutes} from './routes/app.routes.js'
+import {equiposRoutes} from './routes/equipo.routes.js'
 
 const PORT = process.env.PORT ?? 3000
 const app =express()

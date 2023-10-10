@@ -4,7 +4,7 @@ export class equipoControllers{
  
     static async getAll (req,res){
 
-       const data = EquipoModel.getAll()
+       const data = await EquipoModel.getAll()
 
         res.json(data)
 

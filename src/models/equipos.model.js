@@ -14,8 +14,8 @@ export class EquipoModel{
 
     static async getAll(){
 
-        const [data] = conection.query(`SELECT * FROM equipo`)
-
+        const [data] = await conection.query(`SELECT * FROM equipo`)
+        console.log(data);
         return data
     }
 

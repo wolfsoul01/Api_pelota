@@ -1,5 +1,5 @@
 import {Router} from 'express'
-import {equipoControllers} from '../controllers/app.controllers.js'
+import {equipoControllers} from '../controllers/equipo.controllers.js'
 
 
 
