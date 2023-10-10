@@ -1,6 +1,6 @@
 import z from 'zod'
 
-const peloteroSchema= z.object({
+const playerSchema= z.object({
     nombre:z.string(),
     edad:z.number().int().min(18).max(80),
     exp:z.number().int().min(0).default(0),
@@ -9,5 +9,5 @@ const peloteroSchema= z.object({
 
 export function validatePlayer(player){
 
-    return peloteroSchema.safeParse(player)
+    return playerSchema.safeParse(player)
 }
