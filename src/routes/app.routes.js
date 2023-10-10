@@ -5,4 +5,4 @@ import {equipoControllers} from '../controllers/app.controllers.js'
 
 export const equiposRoutes= Router()
 
-appRoutes.get('/',equipoControllers.getAll)
+equiposRoutes.get('/',equipoControllers.getAll)
