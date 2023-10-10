@@ -20,7 +20,7 @@ export class PeloteroModel{
     }
     static async getById(id){
 
-        const [data] = await conection.query(`SELECT * FROM pelotero where id_pelotero=${id}`)
+        const [data] = await conection.query(`SELECT * FROM pelotero where id_pelotero= ?`,[id])
         return data
     }
 
