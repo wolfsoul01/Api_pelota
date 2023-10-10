@@ -22,7 +22,6 @@ export class peloteroControllers{
 
         const input = req.body
 
-        console.log(input);
         res.json(input)
 
     }
