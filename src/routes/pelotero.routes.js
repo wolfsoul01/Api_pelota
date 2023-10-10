@@ -7,3 +7,5 @@ export const peloteroRoutes= Router()
 
 peloteroRoutes.get('/',peloteroControllers.getAll)
 peloteroRoutes.get('/:id',peloteroControllers.getById)
+
+peloteroRoutes.post('/',peloteroControllers.create)

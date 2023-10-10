@@ -18,4 +18,12 @@ export class peloteroControllers{
         res.json(data)
 
     }
+    static async create (req,res){
+
+        const input = req.body
+
+        console.log(input);
+        res.json(input)
+
+    }
 }

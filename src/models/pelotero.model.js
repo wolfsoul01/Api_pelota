@@ -23,6 +23,11 @@ export class PeloteroModel{
         const [data] = await conection.query(`SELECT * FROM pelotero where id_pelotero= ?`,[id])
         return data
     }
+    static async create (input){
+
+
+        return data
+    }
 
 
 }
