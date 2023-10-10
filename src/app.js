@@ -1,5 +1,6 @@
 import express from 'express'
 import {equiposRoutes} from './routes/equipo.routes.js'
+import { peloteroRoutes } from './routes/pelotero.routes.js'
 
 const PORT = process.env.PORT ?? 3000
 const app =express()
@@ -9,7 +10,11 @@ app.get('/',(req,res)=>{
     res.send('Api pelota ')
 })
 
-app.use('/api',equiposRoutes)
+
+app.use('/api/equipo',equiposRoutes)
+app.use('/api/pelotero',peloteroRoutes)
+
+
 
 app.use((req,res)=>{
 
