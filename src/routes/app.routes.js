@@ -1,5 +1,8 @@
 import {Router} from 'express'
-import {appControllers} from '../controllers/app.controllers.js'
-export const appRoutes= Router()
+import {equipoControllers} from '../controllers/app.controllers.js'
 
-appRoutes.get('/',appControllers.appGet)
+
+
+export const equiposRoutes= Router()
+
+appRoutes.get('/',equipoControllers.getAll)
