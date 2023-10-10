@@ -18,6 +18,11 @@ export class PeloteroModel{
         console.log(data);
         return data
     }
+    static async getById(id){
+
+        const [data] = await conection.query(`SELECT * FROM pelotero where id_pelotero=${id}`)
+        return data
+    }
 
 
 }

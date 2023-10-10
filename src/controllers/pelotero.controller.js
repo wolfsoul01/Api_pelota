@@ -9,4 +9,13 @@ export class peloteroControllers{
         res.json(data)
 
     }
+    static async getById (req,res){
+
+        const {id}=req.params
+
+       const data = await PeloteroModel.getById(id)
+
+        res.json(data)
+
+    }
 }
