@@ -9,3 +9,5 @@ peloteroRoutes.get('/',peloteroControllers.getAll)
 peloteroRoutes.get('/:id',peloteroControllers.getById)
 
 peloteroRoutes.post('/',[validatePlayerInfo],peloteroControllers.create)
+
+

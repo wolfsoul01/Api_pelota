@@ -23,10 +23,15 @@ export class PeloteroModel{
         const [data] = await conection.query(`SELECT * FROM pelotero where id_pelotero= ?`,[id])
         return data
     }
-    static async create (input){
+    static async create ({nombre,edad,exp,promBat}){
+    
+        const id = (Math.random()*100).toFixed()
 
+        const info = await conection.execute(`INSERT INTO pelotero (id_pelotero,nombre,edad,anonn_exp,prom_bateo) VAlUES
+            (?,?,?,?,?)
+        `,[id,nombre,edad,exp,promBat])
 
-        return data
+        console.log(info);
     }
 
 

@@ -10,4 +10,4 @@ const playerSchema= z.object({
 export function validatePlayerZod(player){
 
     return playerSchema.safeParse(player)
-}
+} 
