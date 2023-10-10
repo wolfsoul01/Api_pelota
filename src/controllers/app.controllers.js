@@ -10,6 +10,22 @@ const config= {
 const conection = mysql2.createConnection(config)
 
 
+const createQuery =(query)=>{
+
+  return new Promise((res,rej)=>{
+
+    conection.query(query,(err,data)=>{
+
+      if(err) rej(err)
+
+      res(data)
+      console.log(data);
+
+    })
+
+  })
+}
+
 
 export class appControllers{
  
@@ -24,11 +40,16 @@ export class appControllers{
 
           });
 
-           conection.query(`SELECT * FROM juegos
-         `,(err,data)=>{
-            console.log(data);
+          try {
+            
+            const data = await createQuery('SELECT * FROM  equipo')
+
             res.json(data)
-         })
+          } catch (error) {
+            return res.json({msg:'Error con la db ',err:error})
+          }
+
+       
 
     }
 }
