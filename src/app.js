@@ -11,7 +11,10 @@ app.get('/',(req,res)=>{
 
 app.use('/api',equiposRoutes)
 
+app.use((req,res)=>{
 
+    res.status(404).send('404 Page not Found')
+})
 
 
 app.listen(PORT,()=>{
