@@ -18,13 +18,8 @@ export class peloteroControllers {
   static async create (req, res) {
     const input = req.body
 
-    await PeloteroModel.create({
-      nombre: input.nombre,
-      edad: input.edad,
-      exp: input.exp,
-      promBat: input.promBat
-    })
+    await PeloteroModel.create(input)
 
-    res.json(input)
+    res.status(201).json({ msj: 'Player create ' })
   }
 }
