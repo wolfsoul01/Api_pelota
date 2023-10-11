@@ -7,4 +7,4 @@ const config = {
   database: 'mydb'
 }
 
-export const conection = await mysql2.createConnection(config)
+export const connection = await mysql2.createConnection(config)

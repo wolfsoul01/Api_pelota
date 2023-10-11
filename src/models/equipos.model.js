@@ -1,8 +1,8 @@
-import { conection } from '../utils/connectionDB'
+import { connection } from '../utils/connectionDB.js'
 
 export class EquipoModel {
   static async getAll () {
-    const [data] = await conection.query('SELECT * FROM equipo')
+    const [data] = await connection.query('SELECT * FROM equipo')
     console.log(data)
     return data
   }
