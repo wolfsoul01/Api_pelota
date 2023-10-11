@@ -1,12 +1,9 @@
-import {EquipoModel} from '../models/equipos.model.js'
+import { EquipoModel } from '../models/equipos.model.js'
 
-export class equipoControllers{
- 
-    static async getAll (req,res){
+export class equipoControllers {
+  static async getAll (req, res) {
+    const data = await EquipoModel.getAll()
 
-       const data = await EquipoModel.getAll()
-
-        res.json(data)
-
-    }
+    res.json(data)
+  }
 }

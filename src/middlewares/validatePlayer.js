@@ -1,14 +1,11 @@
-import {validatePlayerZod} from '../Schema/pelotero.zod.js'
+import { validatePlayerZod } from '../Schema/pelotero.zod.js'
 
+export function validatePlayerInfo (req, res, next) {
+  const input = req.body
 
-export function validatePlayerInfo(req,res,next){
+  const resul = validatePlayerZod(input)
 
-    const input = req.body  
+  if (!resul.success) return res.json({ msg: 'Datos no validos ', error: resul.error })
 
-    const resul= validatePlayerZod(input)
-
-    if(!resul.success)return res.json({msg:'Datos no validos ',error:resul.error})
-
-    next()
-    
+  next()
 }
