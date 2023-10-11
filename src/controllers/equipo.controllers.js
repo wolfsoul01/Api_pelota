@@ -6,4 +6,10 @@ export class equipoControllers {
 
     res.json(data)
   }
+
+  static async create (req, res) {
+    EquipoModel.create({ input: req.body })
+
+    res.json({ msg: 'Creado ' })
+  }
 }

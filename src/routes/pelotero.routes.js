@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import { peloteroControllers } from '../controllers/pelotero.controller.js'
-import { validatePlayerInfo } from '../middlewares/validatePlayer.js'
+import { validatePlayerInfo } from '../middlewares/PlayerValidate.js'
 
 export const peloteroRoutes = Router()
 
