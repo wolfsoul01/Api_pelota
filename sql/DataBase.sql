@@ -50,7 +50,7 @@ ENGINE = InnoDB;
 -- Table `mydb`.`Equipo`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`Equipo` (
-  `idEquipo` INT NOT NULL,
+  `idEquipo` INT NOT NULL AUTO_INCREMENT,
   `nombre_equipo` VARCHAR(45) NULL,
   `initial` VARCHAR(45) NULL,
   `equip_diret` VARCHAR(45) NULL,
@@ -63,7 +63,7 @@ ENGINE = InnoDB;
 -- Table `mydb`.`Pelotero`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`Pelotero` (
-  `id_jugador` INT NOT NULL,
+  `id_jugador` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NULL,
   `edad` INT NULL,
   `anonn_exp` INT NULL,
@@ -76,7 +76,7 @@ ENGINE = InnoDB;
 -- Table `mydb`.`Posiciones`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`Posiciones` (
-  `posiciones` VARCHAR(45) NULL,
+  `posiciones` VARCHAR(45) NULL ,
   `efectividad` INT NULL,
   `Pelotero_id_jugador` INT NOT NULL,
   PRIMARY KEY (`Pelotero_id_jugador`),
@@ -92,8 +92,8 @@ ENGINE = InnoDB;
 -- Table `mydb`.`Lanzador`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`Lanzador` (
-  `Pelotero_id_jugador` INT NOT NULL,
-  `id_lanzador` INT NOT NULL,
+  `Pelotero_id_jugador` INT NOT NULL ,
+  `id_lanzador` INT NOT NULL ,
   `cant_win` INT NULL,
   `cant_over` VARCHAR(45) NULL,
   `mano` VARCHAR(45) NULL,
@@ -136,7 +136,7 @@ ENGINE = InnoDB;
 -- Table `mydb`.`Participaciones`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`Participaciones` (
-  `Serie_id_serie` INT NOT NULL,
+  `Serie_id_serie` INT NOT NULL AUTO_INCREMENT,
   `Equipo_idEquipo` INT NOT NULL,
   `Juegos_ganados` INT NULL,
   `Juegos_Perdidos` INT NULL,
@@ -189,7 +189,7 @@ ENGINE = InnoDB;
 -- Table `mydb`.`Juegos`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`Juegos` (
-  `Serie_id_serie` INT NOT NULL,
+  `Serie_id_serie` INT NOT NULL ,
   `Fecha` DATE NULL,
   `Equipo_win` VARCHAR(45) NULL,
   `Carreras_favor` INT NULL,

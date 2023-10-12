@@ -11,8 +11,8 @@ export class EquipoModel {
     console.log(input)
     const { nameEquip, init, equipDir, color } = input
 
-    await connection.execute(`INSERT INTO equipo (id_equipo,nombre_equipo,inicial,equip_diret,color) VALUES
-      (10,?,?,?,?)
+    await connection.execute(`INSERT INTO equipo (nombre_equipo,init,equip_diret,color) VALUES
+      (?,?,?,?)
     `, [nameEquip, init, equipDir, color])
   }
 }

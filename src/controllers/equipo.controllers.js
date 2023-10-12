@@ -8,8 +8,13 @@ export class equipoControllers {
   }
 
   static async create (req, res) {
-    EquipoModel.create({ input: req.body })
+    try {
+      EquipoModel.create({ input: req.body })
+    } catch (error) {
+      console.log(error)
+      return res.json({ msg: 'Error en la db ', error })
+    }
 
-    res.json({ msg: 'Creado ' })
+    res.status(201).json({ msg: 'Creado ' })
   }
 }
