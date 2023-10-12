@@ -9,7 +9,6 @@ export class peloteroControllers {
 
   static async getById (req, res) {
     const { id } = req.params
-
     const data = await PeloteroModel.getById(id)
 
     res.json(data)
@@ -20,6 +19,14 @@ export class peloteroControllers {
 
     await PeloteroModel.create(input)
 
-    res.status(201).json({ msj: 'Player create ' })
+    res.status(201).json({ msg: 'Player create ', input })
+  }
+
+  static async update (req, res) {
+    const infoPlayer = req.body
+    const { id } = req.params
+
+    PeloteroModel.udpate({ id, input: infoPlayer })
+    res.json(req.body)
   }
 }
