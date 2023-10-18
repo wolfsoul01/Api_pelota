@@ -5,7 +5,7 @@ export function validatePlayerInfo (req, res, next) {
 
   const resul = validatePlayerZod(input)
 
-  if (!resul.success) return res.json({ msg: 'Datos no validos ', error: resul.error })
+  if (!resul.success) return res.status(401).json({ msg: 'Datos no validos ', error: resul.error })
 
   next()
 }
@@ -14,7 +14,7 @@ export function validatePlayerInfoUpdate (req, res, next) {
 
   const resul = validatePartialPlayerZod(input)
 
-  if (!resul.success) return res.json({ msg: 'Datos no validos ', error: resul.error })
+  if (!resul.success) return res.status(401).json({ msg: 'Datos no validos ', error: resul.error })
 
   next()
 }
