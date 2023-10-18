@@ -9,3 +9,4 @@ peloteroRoutes.get('/:id', peloteroControllers.getById)
 
 peloteroRoutes.post('/', [validatePlayerInfo], peloteroControllers.create)
 peloteroRoutes.patch('/:id', [validatePlayerInfoUpdate], peloteroControllers.update)
+peloteroRoutes.delete('/:id', peloteroControllers.delete)

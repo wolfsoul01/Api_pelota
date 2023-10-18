@@ -29,4 +29,14 @@ export class peloteroControllers {
     PeloteroModel.udpate({ id, input: infoPlayer })
     res.json(req.body)
   }
+
+  static async delete (req, res) {
+    const { id } = req.params
+
+    PeloteroModel.delete(id).catch(err =>
+      res.json({ msg: 'Error la borrar ', err })
+    )
+
+    res.json({ msg: 'Player Delet' })
+  }
 }

@@ -39,4 +39,8 @@ export class PeloteroModel {
       [...valuesPlayer, id]
     )
   }
+
+  static async delete (id) {
+    await connection.execute('DELETE FROM pelotero WHERE id_jugador=? ', [id])
+  }
 }
